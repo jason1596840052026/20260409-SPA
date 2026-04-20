@@ -1,0 +1,372 @@
+/* 設定文字樣式 */
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body {
+  font-family: "DotGothic16", sans-serif;
+
+}
+
+
+:root {
+
+  /* 設定文字顏色 */
+  --textcolor01: #000f97;
+
+  /* 深空 / 星系底色 */
+  --mycolor01: #0B0F2B;
+  /* 深宇宙藍 */
+  --mycolor02: #141852;
+  /* 星雲靛藍 */
+  --mycolor03: #1F1A44;
+  /* 深紫星夜 */
+  --mycolor04: #05060F;
+  /* 虛空黑 */
+
+  /* 星雲 / 漩渦結構 */
+  --mycolor05: #2B2F77;
+  /* 星雲藍紫 */
+  --mycolor06: #3E1F6F;
+  /* 銀河紫 */
+  --mycolor07: #5A2A82;
+  /* 深星雲紫 */
+  --mycolor08: #7B5EA7;
+  /* 霧紫星塵 */
+
+  /* 冷色系 / 星光與能量流 */
+  --mycolor09: #006091;
+  /* 等離子藍 */
+  --mycolor10: #5EE7FF;
+  /* 星光藍 */
+  --mycolor11: #00F5D4;
+  /* 星際青綠 */
+  --mycolor12: #8BE9FD;
+  /* 冰霧星光 */
+
+  /* 暖色系 / 宇宙能量核心 */
+  --mycolor13: #fa4a8a;
+  /* 星核洋紅 */
+  --mycolor14: #FF7ED4;
+  /* 星雲粉 */
+  --mycolor15: #FFC857;
+  /* 恆星金 */
+  --mycolor16: #FF9F1C;
+  /* 超新星橘 */
+
+  /* 高光 / 星塵閃耀 */
+  --mycolor17: #FFFFFF;
+  /* 星點白 */
+  --mycolor18: #E6D9FF;
+  /* 星塵淡紫 */
+  --mycolor19: #9B5DE5;
+  /* 宇宙電紫 */
+  --mycolor20: #00FFCF;
+  /* 量子薄荷 */
+
+  --mycolor21: #FFC567;
+  --mycolor20: #000000;
+
+  --gradient-01: linear-gradient(135deg, var(--mycolor01), var(--mycolor07));
+  /* 漸層2：星光藍→量子薄荷 */
+  --gradient-02: linear-gradient(45deg, var(--mycolor10), var(--mycolor20));
+  /* 漸層3：星核洋紅→超新星橘（暖色系對比） */
+  --gradient-03: linear-gradient(90deg, var(--mycolor13), var(--mycolor16));
+
+}
+
+/* ch03.文字相關 & ch04.圖片相關 */
+.fw-100 {
+  font-weight: 100;
+}
+
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+/* 主標 - 街頭/科技感 */
+.title-01 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--mycolor16);
+  letter-spacing: 6px;
+  line-height: 2;
+  text-shadow: 4px 4px 0 var(--mycolor19), 10px 10px 30px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+}
+
+/* 副標 - 色塊感 */
+.title-02 {
+  font-size: 52px;
+  font-weight: 800;
+  background: var(--mycolor13);
+  color: #fff;
+  letter-spacing: 2px;
+  margin-top: 12px;
+  display: inline-block;
+  padding: 4px 14px;
+}
+
+/* 主標 - 街頭/科技感 */
+.title-03 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--mycolor17);
+  letter-spacing: 6px;
+  line-height: 2;
+  text-shadow: 4px 4px 0 var(--mycolor01), 10px 10px 30px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+}
+
+/* 內文 - 雜誌感 */
+.title-04 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--mycolor08);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  max-width: 480px;
+  opacity: 0.85;
+}
+
+/* roller .roller-l  .roller-r  .roller-t   .roller-b */
+.roller-l {
+  position: relative;
+  overflow: hidden;
+}
+
+.roller-l .roller-l_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /* 更有旅遊氛圍的漸層（夕陽+海岸色調） */
+  background: linear-gradient(135deg,
+      rgba(255, 204, 153, 0.25) 0%,
+      rgba(255, 140, 66, 0.55) 40%,
+      rgba(0, 180, 216, 0.45) 100%);
+
+  /* 柔焦玻璃質感 */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  left: -100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* 柔和過渡 */
+  transition: left 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+    opacity 0.6s ease,
+    transform 0.8s ease;
+
+  /* 初始透明感 */
+  opacity: 0.95;
+
+  /* 微立體感 */
+  box-shadow:
+    inset 0 0 80px rgba(255, 255, 255, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.15);
+
+  /* 細緻圓角（若父層有圓角會更自然） */
+  border-radius: 12px;
+
+  /* 微縮放增加動態感 */
+  transform: scale(1.05);
+}
+
+
+.roller-l:hover .roller-l_box {
+  left: 0;
+}
+
+.roller-r {
+  position: relative;
+  overflow: hidden;
+}
+
+.roller-r .roller-r_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(228, 205, 186, 0.3), rgba(214, 107, 20, 0.6));
+  right: -100%;
+  display: flex;
+  /* 垂直置中 */
+  align-items: center;
+  /* 水平置中 */
+  justify-content: center;
+  transition: right 1s;
+}
+
+.roller-r:hover .roller-r_box {
+  right: 0;
+}
+
+.fa-instagram {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+/* 所有社交圖示 hover 放大效果 */
+.fa-instagram,
+.fa-square-facebook,
+.fa-line,
+.fa-square-x-twitter,
+.fa-threads,
+.fa-youtube {
+  transition: all 0.3s ease;
+  /* 讓動畫滑順 */
+}
+
+/* 滑鼠移過去 → 放大 1.1 倍 */
+.fa-instagram:hover,
+.fa-square-facebook:hover,
+.fa-line:hover,
+.fa-square-x-twitter:hover,
+.fa-threads:hover,
+.fa-youtube:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+  /* 變亮一點 */
+}
+
+/* s01 header bar */
+.s01-bg {
+  background: linear-gradient(135deg, #7f0019, #faf7eb);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.overlay {
+  background: transparent;
+  backdrop-filter: none;
+}
+
+.social-icons {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: -6px;
+  font-size: 1.3rem;
+  padding: 6px 14px;
+  background: rgba(255, 238, 170, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 4px;
+  color: #6b6b6b;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icons a {
+  font-size: 1.3rem;
+  color: #5f5f5f;
+  text-decoration: none;
+  transition: 0.25s;
+  margin-left: 0;
+}
+
+.social-icons a:hover {
+  color: #2f2f2f;
+  transform: translateY(-2px);
+}
+
+.carousel-inner {
+  aspect-ratio: 11.5 / 6;
+  /* 固定比例 */
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item {
+  transition: transform 1.2s ease-in-out;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-inner {
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.outline-text {
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
+  /* 描邊 */
+}
+
+/* 只影響 s03 */
+#s03 .carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 60px 30px 30px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0)
+  );
+
+  text-align: left;
+}
+
+/* 標題 */
+#s03 .carousel-caption h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 10px rgba(255, 187, 40, 0.7);
+}
+
+/* 內文 */
+#s03 .carousel-caption p {
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+.tag {
+  display: inline-block;
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  margin-bottom: 10px;
+}
