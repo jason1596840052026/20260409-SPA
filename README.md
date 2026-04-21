@@ -1,7 +1,7 @@
-# 20260409 SPA
+# TCNR Website
 
 Single page application practice project.
 
 ## GitHub Pages
 
-https://jason1596840052026.github.io/20260409-SPA/
+https://jason1596840052026.github.io/TCNR-website/
